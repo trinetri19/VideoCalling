@@ -1,0 +1,167 @@
+.lobby {
+  background: linear-gradient(45deg, #445067, #476eb1, #6dd5fa);
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  min-height: 70vh;
+  margin: 2rem auto;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.lobby h1 {
+  text-align: center;
+  padding: 1rem;
+  color: black;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.txt {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#standard-basic {
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+}
+
+#connectBtn {
+  width: auto;
+  min-width: 120px;
+  padding: 0.6rem 1.2rem;
+  background-color: black;
+  color: wheat;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.self-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.self-video video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 6px;
+}
+
+.btndiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.videoCon {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/images/vcbg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.afterJoinself {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  right: 0;
+  bottom: 10vh;
+  gap: 1rem;
+}
+
+.afterJoinself video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 6px;
+}
+
+.allVideo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.allVideo video {
+  border: 1px solid black;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 6px;
+}
+
+.videoBtn {
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(11, 11, 11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 0.5rem;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+/* 🔹 Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .lobby {
+    width: 95%;
+  }
+  .self-video video,
+  .afterJoinself video {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .txt {
+    flex-direction: column;
+    align-items: center;
+  }
+  #standard-basic {
+    width: 90%;
+  }
+  #connectBtn {
+    width: 90%;
+  }
+  .self-video video {
+    max-width: 90%;
+  }
+  .afterJoinself {
+    position: static;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .lobby h1 {
+    font-size: 1.5rem;
+  }
+  .allVideo video {
+    max-width: 90%;
+  }
+  .videoBtn {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
