@@ -1,7 +1,7 @@
 import React from "react";
 import "./Landing.css";
 import Navbar from "./templates/Navbar";
-import Footer from "./templates/footer";
+import Footer from "./templates/Footer";
 import Button from "./templates/Button";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,7 +10,7 @@ import MeetingCodeToast from "./MeetingCodeToast"; // import
 const Landing = () => {
   const handleGetStarted = () => {
     console.log(`hello`)
-    
+
     toast.info(<MeetingCodeToast />, {
       position: "top-center",
       autoClose: false,

@@ -1,7 +1,6 @@
 import './App.css'
 import Landing from './pages/Landing'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './pages/templates/Navbar';
 import Register from './pages/Authentication/Register/Register';
 import Login from './pages/Authentication/Login/Login';
 import Meet from './pages/Meet';
