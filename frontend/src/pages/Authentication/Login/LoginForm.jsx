@@ -28,7 +28,7 @@ const Loginform = () => {
 
     
     setTimeout(() => {
-      navigate("/home");
+      navigate("/");
     }, 2000);
 
   } catch (error) {
