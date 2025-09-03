@@ -13,9 +13,9 @@ import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 
 import CallEndIcon from '@mui/icons-material/CallEnd';
 import { useNavigate } from 'react-router-dom';
+import server from '../../environtment';
 
-
-const server_url = "http://localhost:8080";
+const server_url = server ;
 
 var connections = {}
 

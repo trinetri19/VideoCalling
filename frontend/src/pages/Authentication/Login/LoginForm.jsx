@@ -5,7 +5,7 @@ import Button from '../../templates/Button'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import server from '../../../../environtment'
 const Loginform = () => {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
@@ -14,7 +14,7 @@ const Loginform = () => {
   e.preventDefault();
 
   try {
-    const res = await axios.post("http://localhost:8080/VC/login", {
+    const res = await axios.post(`${server}/VC/login`, {
       username,
       password,
     });
