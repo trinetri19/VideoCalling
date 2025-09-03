@@ -1,5 +1,5 @@
 import './App.css'
-import Landing from './pages/landing'
+import Landing from './pages/Landing'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './pages/templates/Navbar';
 import Register from './pages/Authentication/Register/Register';
