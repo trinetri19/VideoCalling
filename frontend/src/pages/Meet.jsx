@@ -293,7 +293,7 @@ const Meet = () => {
             let tracks = localVideoRef.current.srcObject.getTracks();
             tracks.forEach(track => track.stop())
         } catch (e) { }
-        routeTo('/VC/home');
+        routeTo('/home');
     }
     return (
         <div className="mainD">

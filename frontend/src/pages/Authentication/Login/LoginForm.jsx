@@ -28,7 +28,7 @@ const Loginform = () => {
 
     
     setTimeout(() => {
-      navigate("/VC/home");
+      navigate("/home");
     }, 2000);
 
   } catch (error) {
@@ -57,7 +57,7 @@ const Loginform = () => {
                 </div>
                 <Button title="Login">Login</Button>
                 <ToastContainer></ToastContainer>
-                <p>Not An User? Then <Link to="/VC/register">REGISTER!</Link> </p>
+                <p>Not An User? Then <Link to="/register">REGISTER!</Link> </p>
             </form>
         </div>
     )

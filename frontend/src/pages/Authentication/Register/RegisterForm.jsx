@@ -34,7 +34,7 @@ import server from '../../../../environtment';
 
    
     setTimeout(() => {
-      navigate("/VC/home");
+      navigate("/home");
     }, 2000);
 
   } catch (error) {
@@ -69,7 +69,7 @@ import server from '../../../../environtment';
                 <Button title="register"></Button>
                  <ToastContainer />
             </form>
-            <p>Already An User? Then <Link to="/VC/login">Login here!</Link> </p>
+            <p>Already An User? Then <Link to="/login">Login here!</Link> </p>
             
         </div>
     )

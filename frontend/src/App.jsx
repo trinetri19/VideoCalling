@@ -11,11 +11,11 @@ function App() {
   
     <BrowserRouter>
        <Routes>
-           <Route path='/VC/home' element={<Landing></Landing>}></Route>
-           <Route path='/VC/logout' element={<Landing></Landing>}></Route>
-           <Route path='/VC/register' element={<Register></Register>}></Route>
-           <Route path='/VC/login' element={<Login></Login>}></Route>
-           <Route path='/VC/:url' element={<Meet></Meet>}></Route>
+           <Route path='/home' element={<Landing></Landing>}></Route>
+           <Route path='/logout' element={<Landing></Landing>}></Route>
+           <Route path='/register' element={<Register></Register>}></Route>
+           <Route path='/login' element={<Login></Login>}></Route>
+           <Route path='/:url' element={<Meet></Meet>}></Route>
        </Routes>
    </BrowserRouter>
   </div>

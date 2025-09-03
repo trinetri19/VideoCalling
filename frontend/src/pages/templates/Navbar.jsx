@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
   let handleLogout= ()=>{
-    navigate("/VC/login");
+    navigate("/login");
   }
     return (
         <div className="nav">
@@ -21,7 +21,7 @@ const Navbar = () => {
                 
                  <Link>
                     <Button title="logout" onClick={handleLogout}></Button>
-                </Link>  <Link to="/VC/register">
+                </Link>  <Link to="/register">
                     <Button title="Register"></Button>
                 </Link>
                 

@@ -13,7 +13,7 @@ const MeetingCodeToast = ({ closeToast }) => {
       return;
     }
     closeToast(); 
-    navigate(`/VC/${code}`);
+    navigate(`/${code}`);
   };
 
   return (
