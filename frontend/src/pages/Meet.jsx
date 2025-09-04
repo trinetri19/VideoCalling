@@ -288,13 +288,36 @@ const Meet = () => {
     }
 
 
-    let handleEndCall = () => {
-        try {
+  let handleEndCall = () => {
+    try {
+        // Stop local tracks
+        if (localVideoRef.current?.srcObject) {
             let tracks = localVideoRef.current.srcObject.getTracks();
-            tracks.forEach(track => track.stop())
-        } catch (e) { }
-        routeTo('/');
+            tracks.forEach(track => track.stop());
+            localVideoRef.current.srcObject = null;
+        }
+
+        // Close all peer connections
+        for (let id in connections) {
+            if (connections[id]) {
+                connections[id].close();
+                delete connections[id];
+            }
+        }
+
+        // Optionally notify remote peers
+        if (socketRef.current) {
+            socketRef.current.emit("end-call"); 
+            socketRef.current.disconnect();
+        }
+
+    } catch (e) {
+        console.log("Error ending call:", e);
     }
+
+   
+    routeTo('/');
+};
     return (
         <div className="mainD">
             {

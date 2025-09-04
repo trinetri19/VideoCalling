@@ -45,6 +45,29 @@ const initializeSocket = (server) => {
 });
 
        
+socket.on("end-call", () => {
+    for (const [room, users] of Object.entries(connections)) {
+        const index = users.indexOf(socket.id);
+        if (index !== -1) {
+            // Notify other users that this user has left
+            users.forEach((userId) => {
+                io.to(userId).emit("user-left", socket.id);
+            });
+
+            // Remove user from connections
+            users.splice(index, 1);
+
+            // Delete room if empty
+            if (users.length === 0) {
+                delete connections[room];
+            }
+        }
+    }
+
+    // Optionally disconnect the socket
+    socket.disconnect(true);
+    console.log(`User ended call: ${socket.id}`);
+});
         // Handling disconnect
         socket.on("disconnect", () => {
             const diffTime = Math.abs(timeOnline[socket.id] - new Date());
