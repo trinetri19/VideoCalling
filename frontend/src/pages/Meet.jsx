@@ -297,7 +297,6 @@ const Meet = () => {
             localVideoRef.current.srcObject = null;
         }
 
-        // Close all peer connections
         for (let id in connections) {
             if (connections[id]) {
                 connections[id].close();
@@ -305,7 +304,7 @@ const Meet = () => {
             }
         }
 
-        // Optionally notify remote peers
+      
         if (socketRef.current) {
             socketRef.current.emit("end-call"); 
             socketRef.current.disconnect();
@@ -378,7 +377,7 @@ const Meet = () => {
                                         }
                                         }
                                         autoPlay></video>
-                                        <p>{username}</p>
+    
                                 </div>
                             ))}
                         </div>
